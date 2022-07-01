@@ -1,4 +1,4 @@
-from flask import Flask,request, url_for, redirect, render_template
+from flask import Flask,request, url_for, redirect, render_template, jsonify
 import pickle
 import numpy as np
 
@@ -11,7 +11,7 @@ model = pickle.load(open('random_forest_classsifier.pkl','rb'))
 def hello_world():
     return render_template('air_quality.html')
 
-@app.route('/predict',methods = ['POST', 'GET'])
+@app.route('/predict',methods = ['POST'])
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
@@ -24,7 +24,7 @@ def predict():
         prediction = 'Moderate'
 
     output = prediction
-    return render_template('air_quality.html', pred='The air quality is {}'.format(output))
+    return render_template('air_quality.html', prediction_text ='The air quality is {}'.format(output))
 if __name__ == '__main__':
     app.run(debug=True)
 
