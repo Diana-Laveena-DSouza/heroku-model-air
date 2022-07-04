@@ -24,6 +24,7 @@ def predict():
         prediction = 'Moderate'
 
     output = prediction
-    return render_template('air_quality.html', prediction_text= ='The air quality is {}'.format(output))
+    return render_template('air_quality.html', prediction_text='The air quality is {}'.format(output))
+
 if __name__ == '__main__':
     app.run()
