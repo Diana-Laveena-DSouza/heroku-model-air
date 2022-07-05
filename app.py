@@ -38,8 +38,8 @@ def home():
 def predict():
 
     int_features = [float(x) for x in request.form.values()] #Convert string inputs to float.
-    features = [np.array(int_features)]  #Convert to the form [[a, b]] for input to the model
-    pred = model.predict(features)  # features Must be in the form [[a, b]]
+    final_features = [np.array(int_features)]  #Convert to the form [[a, b]] for input to the model
+    pred = model.predict(final_features)  # features Must be in the form [[a, b]]
     if pred == 0:
         prediction = '_'
     elif pred == 1:
@@ -47,7 +47,7 @@ def predict():
     else:
         prediction = 'Moderate'
 
-    output = pred
+    output = prediction
 
     return render_template('index.html', prediction_text='The air quality is {}'.format(output))
 
