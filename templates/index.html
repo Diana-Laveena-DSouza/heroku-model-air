@@ -18,16 +18,16 @@
      If action is omitted, it assumed to be the current page -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="Longitude" placeholder="Longitude" required="required" /><br>
-        <input type="text" name="Latitude" placeholder="Latitude" required="required" />
-        <input type="text" name="NO2 Hour" placeholder="NO2 in Hours" required="required" />
-        <input type="text" name="NO2 Quality" placeholder="NO2 Quality: 0 = _, 1 = Good, 2 = Moderate" required="required" />
-        <input type="text" name="NO2 Value" placeholder="NO2 Value" required="required" />
-        <input type="text" name="Month" placeholder="Month" required="required" />
-        <input type="text" name="day" placeholder="day in Numbers" required="required" />
-        <input type="text" name="Barcelona - Ciutadella" placeholder="Barcelona - Ciutadella: 1 for yes 0 for no" required="required" />
-        <input type="text" name="Barcelona - Eixample" placeholder="Barcelona - Eixample: 1 for yes 0 for no" required="required" />
-        <input type="text" name="Barcelona - GrÃ cia" placeholder="Barcelona - GrÃ cia: 1 for yes 0 for no" required="required" />
-        <input type="text" name="Barcelona - Observ Fabra" placeholder="Barcelona - Observ Fabra: 1 for yes 0 for no" required="required" />
+        <input type="text" name="Latitude" placeholder="Latitude" required="required" /><br>
+        <input type="text" name="NO2 Hour" placeholder="NO2 in Hours" required="required" /><br>
+        <input type="text" name="NO2 Quality" placeholder="NO2 Quality: 0 = _, 1 = Good, 2 = Moderate" required="required" /><br>
+        <input type="text" name="NO2 Value" placeholder="NO2 Value" required="required" /><br>
+        <input type="text" name="Month" placeholder="Month" required="required" /><br>
+        <input type="text" name="day" placeholder="day in Numbers" required="required" /><br>
+        <input type="text" name="Barcelona - Ciutadella" placeholder="Barcelona - Ciutadella: 1 for yes 0 for no" required="required" /><br>
+        <input type="text" name="Barcelona - Eixample" placeholder="Barcelona - Eixample: 1 for yes 0 for no" required="required" /><br>
+        <input type="text" name="Barcelona - GrÃ cia" placeholder="Barcelona - GrÃ cia: 1 for yes 0 for no" required="required" /><br>
+        <input type="text" name="Barcelona - Observ Fabra" placeholder="Barcelona - Observ Fabra: 1 for yes 0 for no" required="required" /><br>
         <input type="text" name="Barcelona - Sants" placeholder="Barcelona - Sants: 1 for yes 0 for no" required="required" /><p>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict percent population with heart disease</button></p>
