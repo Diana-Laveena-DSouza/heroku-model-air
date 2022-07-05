@@ -39,9 +39,15 @@ def predict():
 
     int_features = [float(x) for x in request.form.values()] #Convert string inputs to float.
     features = [np.array(int_features)]  #Convert to the form [[a, b]] for input to the model
-    prediction = model.predict(features)  # features Must be in the form [[a, b]]
+    pred = model.predict(features)  # features Must be in the form [[a, b]]
+    if pred == 0:
+        prediction = '_'
+    elif pred == 1:
+        prediction = 'Good'
+    else:
+        prediction = 'Moderate'
 
-    output = round(prediction[0], 2)
+    output = prediction
 
     return render_template('index.html', prediction_text='Percent with heart disease is {}'.format(output))
 
