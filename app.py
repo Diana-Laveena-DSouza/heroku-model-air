@@ -47,9 +47,9 @@ def predict():
     else:
         prediction = 'Moderate'
 
-    output = prediction
+    output = pred
 
-    return render_template('index.html', prediction_text='Percent with heart disease is {}'.format(output))
+    return render_template('index.html', prediction_text='The air quality is {}'.format(output))
 
 
 #When the Python interpreter reads a source file, it first defines a few special variables.
